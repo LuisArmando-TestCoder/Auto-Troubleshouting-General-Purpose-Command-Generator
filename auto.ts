@@ -122,9 +122,9 @@ async function detectShell(): Promise<string> {
     const shellEnv = Deno.env.get("SHELL") || "";
     const candidates = [
       { pattern: /bash/, shell: "bash" },
-      { pattern: /zsh/, shell: "zsh" },
+      { pattern: /zsh/, shell: "z shell" },
       { pattern: /fish/, shell: "fish" },
-      { pattern: /sh/, shell: "sh" },
+      { pattern: /sh/, shell: "bourne shell" },
     ];
     const detected = detectCandidate(candidates, shellEnv);
     if (detected) return detected;
